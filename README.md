@@ -1,34 +1,19 @@
-# Rough colors 🌴
+# Rough colors API
 
 An open REST API for finding colors from an image.
 
-## Usage
+## What?
 
-$.getJSON('colors.oskarrough.com/v1/images/http://exa')
+Feed the API an image and it will return JSON with all the colors. It looks like this:
 
-## Snippets (for my self)
+http://46.101.253.25/?url=http://40.media.tumblr.com/d329a025711da3b8cd5ecd62bdb8277c/tumblr_nw85l3EzGd1uubkx7o1_500.jpg
 
-ssh oskar@46.101.253.25
+With that, you can build something like this:
 
-#
-rsync -azP source/ destination
+http://haku.surge.sh/?url=http://40.media.tumblr.com/d329a025711da3b8cd5ecd62bdb8277c/tumblr_nw85l3EzGd1uubkx7o1_500.jpg
 
 ### References
 
 - I can extract colors using https://github.com/josip/node-colour-extractor, which is great
 - Deployed on Digital Ocean [tutorial](http://antrikshy.com/blog/deploy-an-expressjs-app-on-digital-ocean-complete-succinct-guide/)
 — Synced with [rsync](https://www.digitalocean.com/community/tutorials/how-to-use-rsync-to-sync-local-and-remote-directories-on-a-vps)
-
-## Tutorial
-
-// git clone this repo
-rsync -azP --exclude 'node_modules' --exclude '.git' ./ oskar@46.101.253.25:~/rough-colors
-cd rough-colors
-npm install
-npm start
-// visit your IP
-sudo apt-get update
-sudo apt-get install nginx
-// visit your IP
-
-sudo restart rough-colors
