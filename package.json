@@ -1,0 +1,18 @@
+{
+  "name": "rough-colors",
+  "version": "0.0.1",
+  "description": "Color API",
+  "main": "index.js",
+  "dependencies": {
+    "colour-extractor": "^0.2.1",
+    "express": "^4.13.3",
+    "url-regex": "^3.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node .",
+    "test": "xo"
+  },
+  "author": "Oskar Rough Mosumgaard",
+  "license": "ISC"
+}
