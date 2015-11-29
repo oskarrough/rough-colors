@@ -11,7 +11,8 @@
   "devDependencies": {},
   "scripts": {
     "start": "node .",
-    "test": "xo"
+    "test": "xo",
+    "deploy": "rsync -azP --exclude 'node_modules' --exclude '.git' ./ oskar@46.101.253.25:~/rough-colors"
   },
   "author": "Oskar Rough Mosumgaard",
   "license": "ISC"
