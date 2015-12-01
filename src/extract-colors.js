@@ -2,13 +2,15 @@
 var ce = require('colour-extractor')
 
 exports.all = function (imageUrl, callback) {
-	ce.topColours(imageUrl, true, function (colours) {
+	url = imageUrl.replace('https://', 'http://');
+	ce.url(url, true, function (colours) {
 		callback(colours);
 	});
 }
 
 exports.mapped = function (imageUrl, callback) {
-	ce.colourKey(imageUrl, function (colours) {
+	url = imageUrl.replace('https://', 'http://');
+	ce.colourKey(url, function (colours) {
 		callback(colours);
 	});
 }

@@ -40,8 +40,6 @@ app.get('/', function (request, response) {
 			return;
 		}
 
-		url = url.replace('https://', 'http://');
-
 		// ?mapped=true return 3x3 mapped colors
 		if (request.query.mapped) {
 			extractColors.mapped(url, function (colors) {
