@@ -5,13 +5,16 @@
   "main": "index.js",
   "dependencies": {
     "colour-extractor": "^0.2.1",
-    "express": "^4.13.3",
-    "url-regex": "^3.0.0"
+    "express": "^4.13.4",
+    "url-regex": "^3.1.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "ava": "^0.14.0",
+    "xo": "^0.14.0"
+  },
   "scripts": {
     "start": "node .",
-    "test": "xo",
+    "test": "xo && ava",
     "deploy": "rsync -azP --exclude 'node_modules' --exclude '.git' ./ oskar@46.101.253.25:~/rough-colors"
   },
   "author": "Oskar Rough Mosumgaard",

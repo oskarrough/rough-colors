@@ -9,7 +9,7 @@ const checkValidUrl = require('./src/check-valid-url');
 const checkUrlExists = require('./src/check-url-exists');
 const serializer = require('./src/serializer');
 
-app.use(function(request, response, next) {
+app.use(function (request, response, next) {
 	response.header('Access-Control-Allow-Origin', '*');
 	response.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
 	next();
@@ -55,17 +55,16 @@ app.get('/', function (request, response) {
 	});
 });
 
-function errorHandler(err, req, res, next) {
-  if (res.headersSent) {
-    return next(err);
-  }
-  res.status(500);
-  res.render('error', { error: err });
-}
+// function errorHandler(error, req, res, next) {
+// 	if (res.headersSent) {
+// 		return next(error);
+// 	}
+// 	res.status(500);
+// 	res.render('error', {error});
+// }
 
 const server = app.listen(3000, function () {
-  const host = server.address().address;
-  const port = server.address().port;
-
-  console.log(`Rough colors listening at http://${host}:${port}`);
+	const host = server.address().address;
+	const port = server.address().port;
+	console.log(`Rough colors listening at http://${host}:${port}`);
 });

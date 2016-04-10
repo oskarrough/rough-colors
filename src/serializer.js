@@ -7,4 +7,4 @@ module.exports.format = function (colorData) {
 			rgb: color[1]
 		};
 	});
-}
+};
